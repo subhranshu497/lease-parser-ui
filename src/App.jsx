@@ -89,11 +89,10 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 p-6">
       <h1 className="text-xl font-bold text-slate-900">lease-parser-ui</h1>
       <p className="text-sm text-slate-500 mb-5 max-w-3xl">
-        Standalone frontend for the <span className="font-mono">lease-abstraction</span> service's
-        local demo — a separate origin from the API, so requests below are cross-origin (CORS).
-        Backend must be started with{' '}
-        <span className="font-mono">LEASE_ABSTRACTION_ENABLE_DEMO_UI=1</span>.
-      </p>
+          A standalone interface for the lease Extraction API, hosted separately from the
+          backend. Make sure the backend is running so it accepts
+          requests from this page.
+        </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-4 items-start">
         <div>

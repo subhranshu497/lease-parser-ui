@@ -34,11 +34,11 @@ export default function UploadPanel({ api, teamId, onParsed }) {
   return (
     <Card title="1. Upload a lease PDF to parse">
       <p className="text-sm text-slate-500 mb-3">
-        Extracts the PDF's text locally, then runs the real pipeline: Claude extraction (OpenAI
-        failover, FR-012), confidence-threshold routing to auto-populate or the review queue
-        (FR-004/FR-013). Uses the API keys in the backend's <span className="font-mono">.env</span> —
-        this is a real, billed model call, not a fake seed.
-      </p>
+          Reads the PDF's text, then runs it through the real pipeline: Claude extracts the data
+          (falling back to OpenAI if needed), and results are either auto-filled or sent to the
+          review queue based on confidence. This uses the backend's live API keys, so it's a real,
+          billed model call — not a simulated result.
+        </p>
       <input
         type="file"
         accept="application/pdf"
