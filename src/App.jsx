@@ -10,9 +10,9 @@ import FieldsTable from './components/FieldsTable.jsx'
 import ReviewQueueTable from './components/ReviewQueueTable.jsx'
 import RequestLog from './components/RequestLog.jsx'
 
-//http://127.0.0.1:8000
+
 export default function App() {
-  const [apiBase, setApiBase] = useState(import.meta.env.VITE_API_BASE || 'https://newmark-backend.netlify.app/')
+  const [apiBase, setApiBase] = useState(import.meta.env.VITE_API_BASE || 'http://127.0.0.1:8000')
   const [identity, setIdentity] = useState({
     userId: crypto.randomUUID(),
     teamId: crypto.randomUUID(),
